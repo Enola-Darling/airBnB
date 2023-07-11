@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 320px;
+    background-color: #ffffff;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .details {
+    padding: 16px;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 16px;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-item {
+    margin-bottom: 8px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .available {
+    color: #00c853;
+  }
+  
+  .unavailable {
+    color: #f44336;
+  }

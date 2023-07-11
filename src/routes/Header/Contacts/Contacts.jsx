@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { roomList } from "../../mocks/reservations";
+import { roomList } from "../../../mocks/reservations";
+import styles from "./index.module.scss";
 
 
 export default function Contacts() {
@@ -14,10 +15,10 @@ useEffect(() => {
   }, []);
 
   return (
-    <div>
-    <h1>Contacts</h1>
+    <div className={styles.contactInfo}>
+    <h1>Contacts Information</h1>
     {contactInfo.map((contact, index) => (
-      <div key={index}>
+      <div key={index} className={styles.contactCard}>
         <h2>{contact.phone}</h2>
         <p>{contact.email}</p>
       </div>
