@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react"
-import { roomList } from "../../../mocks/reservations";
+import { useEffect, useState } from "react";
+import { roomList } from "../../mocks/reservations";
 import styles from "./Locations.module.scss";
 
-
 export default function Locations() {
-    const [locationInfo, setLocationInfo] = useState([]);
-  
-    useEffect(() => {
-      setLocationInfo(roomList);
-    }, []);
-  
-    
+  const [locationInfo, setLocationInfo] = useState([]);
+
+  useEffect(() => {
+    setLocationInfo(roomList);
+  }, []);
+
   return (
     <div className={styles.container}>
       {locationInfo.map((location) => (
@@ -32,7 +30,13 @@ export default function Locations() {
               </p>
               <p>
                 Availability:{" "}
-                <span className={location.availability ? styles.available : styles.unavailable}>
+                <span
+                  className={
+                    location.availability
+                      ? styles.available
+                      : styles.unavailable
+                  }
+                >
                   {location.availability ? "Available" : "Not Available"}
                 </span>
               </p>
